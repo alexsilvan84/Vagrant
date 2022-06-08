@@ -1,0 +1,30 @@
+
+Instalação do virtual box
+
+https://download.virtualbox.org/virtualbox/6.1.34/virtualbox-6.1_6.1.34-150636.1~Ubuntu~eoan_amd64.deb
+
+Instalação do vagrant no linux
+#inicializa o vagrant na pasta que está localizada
+apt install vagrant
+
+#cria uma distro
+vagrant init ubuntu/trusty64
+
+#inicia uma distro
+vagrant up
+
+#verifica se a distro está em execução
+vagrant status
+
+#acessa a maquina criada por ssh
+vagrant ssh
+
+#finaliza a execução da maquina virtual
+vagrant halt
+#Reinicia a maquina
+vagrant reload
+
+#Destroi a máquina virtual.
+vagrant destroy
+
+sudo nano /usr/share/nginx/html/index.html

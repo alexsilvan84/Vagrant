@@ -1,0 +1,139 @@
+-*- modo: rubi -*-
+# vi: set ft=ruby :
+
+# Toda a configuração do Vagrant é feita abaixo. O "2" no Vagrant.configure
+# configura a versão de configuração (suportamos estilos mais antigos para
+# compatibilidade com versões anteriores). Por favor, não mude a menos que você saiba o que
+# você está fazendo.
+Vagrant.configure("2") do |config|
+  # As opções de configuração mais comuns estão documentadas e comentadas abaixo.
+  # Para uma referência completa, consulte a documentação online em
+  # https://docs.vagrantup.com.
+
+  # Todo ambiente de desenvolvimento Vagrant requer uma caixa. Você pode procurar
+  # caixas em https://vagrantcloud.com/search.
+  config.vm.box = "base"
+
+  # Desabilite a verificação automática de atualização da caixa. Se você desabilitar isso, então
+  # caixas só serão verificadas para atualizações quando o usuário executar
+  # `caixa vagabunda desatualizada`. Isso não é recomendado.
+  # config.vm.box_check_update = false
+
+  # Cria um mapeamento de porta encaminhado que permite acesso a uma porta específica
+  # dentro da máquina a partir de uma porta na máquina host. No exemplo abaixo,
+  # acessando "localhost:8080" acessará a porta 80 na máquina convidada.
+  # NOTA: Isso permitirá o acesso público à porta aberta
+  # config.vm.network "forwarded_port", convidado: 80, host: 8080
+
+  # Cria um mapeamento de porta encaminhado que permite acesso a uma porta específica
+  # dentro da máquina a partir de uma porta na máquina host e só permite acesso
+  # via 127.0.0.1 para desabilitar o acesso público
+  # config.vm.network "forwarded_port", convidado: 80, host: 8080, host_ip: "127.0.0.1"
+
+  # Crie uma rede privada, que permite acesso somente do host à máquina
+  # usando um IP específico.
+  # config.vm.network "private_network", ip: "192.168.33.10"
+
+  # Crie uma rede pública, que geralmente corresponde à rede em ponte.
+  # Redes em ponte fazem a máquina aparecer como outro dispositivo físico no
+  # sua rede.
+  # config.vm.network "public_network"
+
+  # Compartilhe uma pasta adicional com a VM convidada. O primeiro argumento é
+  # o caminho no host para a pasta real. O segundo argumento é
+ # o caminho no convidado para montar a pasta. E o terceiro opcional
+  # argumento é um conjunto de opções não obrigatórias.
+  # config.vm.synced_folder "../data", "/vagrant_data"
+
+  # Configuração específica do provedor para que você possa ajustar vários
+  # provedores de apoio para Vagrant. Eles expõem opções específicas do provedor.
+  # Exemplo para VirtualBox:
+  #
+  # config.vm.provider "virtualbox" do |vb|
+  # # Exibe a GUI do VirtualBox ao inicializar a máquina
+  # vb.gui = true
+  #
+  # # Personalize a quantidade de memória na VM:
+  # vb.memória = "1024"
+  # fim
+  #
+  # Veja a documentação do provedor que você está usando para mais
+  # informações sobre as opções disponíveis.
+
+  # Habilite o provisionamento com um script de shell. Provisionadores adicionais, como
+  # Ansible, Chef, Docker, Puppet e Salt também estão disponíveis. por favor veja o
+  # documentação para obter mais informações sobre sua sintaxe e uso específicos.
+  # config.vm.provision "shell", embutido: <<-SHELL
+  #apt-get atualização
+  # apt-get install -y apache2
+  # -*- modo: rubi -*-
+# vi: set ft=ruby :
+
+# Toda a configuração do Vagrant é feita abaixo. O "2" no Vagrant.configure
+# configura a versão de configuração (suportamos estilos mais antigos para
+# compatibilidade com versões anteriores). Por favor, não mude a menos que você saiba o que
+# você está fazendo.
+Vagrant.configure("2") do |config|
+  # As opções de configuração mais comuns estão documentadas e comentadas abaixo.
+  # Para uma referência completa, consulte a documentação online em
+  # https://docs.vagrantup.com.
+
+  # Todo ambiente de desenvolvimento Vagrant requer uma caixa. Você pode procurar
+  # caixas em https://vagrantcloud.com/search.
+  config.vm.box = "base"
+
+  # Desabilite a verificação automática de atualização da caixa. Se você desabilitar isso, então
+  # caixas só serão verificadas para atualizações quando o usuário executar
+  # `caixa vagabunda desatualizada`. Isso não é recomendado.
+  # config.vm.box_check_update = false
+
+  # Cria um mapeamento de porta encaminhado que permite acesso a uma porta específica
+  # dentro da máquina a partir de uma porta na máquina host. No exemplo abaixo,
+  # acessando "localhost:8080" acessará a porta 80 na máquina convidada.
+  # NOTA: Isso permitirá o acesso público à porta aberta
+  # config.vm.network "forwarded_port", convidado: 80, host: 8080
+
+  # Cria um mapeamento de porta encaminhado que permite acesso a uma porta específica
+  # dentro da máquina a partir de uma porta na máquina host e só permite acesso
+  # via 127.0.0.1 para desabilitar o acesso público
+  # config.vm.network "forwarded_port", convidado: 80, host: 8080, host_ip: "127.0.0.1"
+
+  # Crie uma rede privada, que permite acesso somente do host à máquina
+  # usando um IP específico.
+  # config.vm.network "private_network", ip: "192.168.33.10"
+
+  # Crie uma rede pública, que geralmente corresponde à rede em ponte.
+  # Redes em ponte fazem a máquina aparecer como outro dispositivo físico no
+  # sua rede.
+  # config.vm.network "public_network"
+
+  # Compartilhe uma pasta adicional com a VM convidada. O primeiro argumento é
+  # o caminho no host para a pasta real. O segundo argumento é
+ # o caminho no convidado para montar a pasta. E o terceiro opcional
+  # argumento é um conjunto de opções não obrigatórias.
+  # config.vm.synced_folder "../data", "/vagrant_data"
+
+  # Configuração específica do provedor para que você possa ajustar vários
+  # provedores de apoio para Vagrant. Eles expõem opções específicas do provedor.
+  # Exemplo para VirtualBox:
+  #
+  # config.vm.provider "virtualbox" do |vb|
+  # # Exibe a GUI do VirtualBox ao inicializar a máquina
+  # vb.gui = true
+  #
+  # # Personalize a quantidade de memória na VM:
+  # vb.memória = "1024"
+  # fim
+  #
+  # Veja a documentação do provedor que você está usando para mais
+  # informações sobre as opções disponíveis.
+
+  # Habilite o provisionamento com um script de shell. Provisionadores adicionais, como
+  # Ansible, Chef, Docker, Puppet e Salt também estão disponíveis. por favor veja o
+  # documentação para obter mais informações sobre sua sintaxe e uso específicos.
+   config.vm.provision "shell", embutido: <<-SHELL
+   apt-get atualização
+   apt-get install -y apache2
+   SHELL
+fim
+
