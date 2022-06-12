@@ -2,7 +2,7 @@ exec { 'apt-update':
   command => '/usr/bin/apt-get update'
 }
 
-package { ['php7.4', 'php7.4-mssql']:
+package { ['php7.4', 'php7.4-mysql']:
   require => Exec['apt-update'],
   ensure => installed,
 }
