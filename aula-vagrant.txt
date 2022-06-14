@@ -27,4 +27,11 @@ vagrant reload
 #Destroi a máquina virtual.
 vagrant destroy
 
+#Verifica as máquinas existente no sistema, sua localização e id
+vagrant global-status --prune
+
+#comando halt com o id pode realizar operação sem estar necessáriamente dentro da pasta de virtualização.
+vagrant halt bc0947c
+
+
 sudo nano /usr/share/nginx/html/index.html
